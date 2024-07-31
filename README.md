@@ -16,7 +16,6 @@ ________________________________________________________________________________
 Medicine_Recommendations/
 │
 ├── app.py
-├── medicine_recommendations.ipynb
 ├── data/
 │   └── medicines.csv
 ├── static/
@@ -29,7 +28,7 @@ Medicine_Recommendations/
 │   │   └── material-icon/
 │   │       └── css/
 │   │           └── material-design-iconic-font.min.css
-│   ├── images/
+│   └── images/
 │       ├── signin.png
 |       ├── signin.png
 |       ├── menu-svgrepo-com.png
@@ -44,14 +43,17 @@ Medicine_Recommendations/
 |       ├── img2.jpg
 |       ├── img3.jpg       
 │       └── img4.jpg  
-│   
-│   
+│
+├── model/
+│   └── model_colab.ipynb
+| 
 ├── templates/
 ├── index.html
 ├── login_custom.html
 ├── register_custom.html
 ├── recommendation.html
 │── contact.html
+│── README.md
 └── requirements.txt
 ```
 ## Installation
