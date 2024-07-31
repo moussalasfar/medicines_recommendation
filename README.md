@@ -30,14 +30,10 @@ Medicine_Recommendations/
 │   │       └── css/
 │   │           └── material-design-iconic-font.min.css
 │   ├── images/
-│   │   ├── signin.png
-│   │   └── signup.png
-│   ├── js/
-│   │   └── main.js
-│   └── vendor/
-│       └── jquery/
-|           ├── jquery-ui.min.js
-│           └── jquery.min.js
+│       ├── signin.png
+│       └── signup.png
+│   
+│   
 ├── templates/
 ├── index.html
 ├── login_custom.html
