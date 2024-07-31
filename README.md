@@ -77,6 +77,8 @@ Open your browser and go to ```http://127.0.0.1:5000/```.
   Enter the name of a disease to get medicine recommendations.
 - #### Contact:
   Use the contact form to send inquiries.
+## Model
+The machine learning model used for recommendations is provided in the ```model/model_colab.ipynb``` file. This file contains the code and instructions for training and deploying the model.
 ## contact
 For any questions or informations:
 - **linkedin**:<a href="www.linkedin.com/in/moussa-lasfar-423793196" target="_blank">Moussa Lasfar</a><br>
