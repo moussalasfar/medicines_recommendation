@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Recommendation</title>
+    <link rel="stylesheet" href="static/css/style_recommend.css">
+</head>
+<body>
+    <div class="user-circle">
+        {% set email = get_user_email(session['user_id']) %}
+        {% if email %}
+            {{ email[0].upper() }}
+        {% else %}
+            U
+        {% endif %}
+    </div>
+
+    <form method="POST" action="{{ url_for('logout') }}">
+        <button type="submit" class="disconnect-button">Disconnect</button>
+    </form>
+
+    <div class="main">
+        <div class="container">
+            <h2 class="form-title">Get Medicine Recommendations</h2>
+            <form method="POST" class="recommend-form" id="recommend-form">
+                <div class="form-group">
+                    <label for="disease"><i class="zmdi zmdi-health"></i></label>
+                    <input type="text" name="disease" id="disease" placeholder="Enter Disease" required/>
+                    <input type="submit" name="recommend" id="recommend" class="form-submit" value="Recommend"/>
+                    <select id="history-select" class="history-select" onchange="fillInput()">
+                        <option value="" disabled selected>Select from search history</option>
+                        {% for history in search_history %}
+                            <option value="{{ history.input }}">{{ history.input }} - {{ history.date.strftime('%Y-%m-%d %H:%M:%S') }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group form-button">
+                    
+                </div>
+            </form>
+        </div>
+        
+        {% if medicines %}
+        <div class="container1">
+            <div class="medicines-list">
+                <h3>Recommended Medicines</h3>
+                {% for medicine in medicines %}
+                    <div class="medicine-item">
+                        <h4>{{ medicine['Medicine Name'] }}</h4>
+                        <p><span>Uses</span>: {{ medicine['Uses'] }} .</p>
+                        <p><span>Side Effects:</span> {{ medicine['Side_effects'] }} .</p>
+                        <p><span>Manufacturer:</span> {{ medicine['Manufacturer'] }} .</p>
+                        <p><span>Review:</span> Excellent {{ medicine['Excellent Review %'] }}%, Average {{ medicine['Average Review %'] }}%, Poor {{ medicine['Poor Review %'] }}% .</p>
+                        <img src="{{ medicine['Image URL'] }}" alt="{{ medicine['Medicine Name'] }}">
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <script>
+        function fillInput() {
+            var select = document.getElementById('history-select');
+            var diseaseInput = document.getElementById('disease');
+            diseaseInput.value = select.value;
+        }
+    </script>
+</body>
+</html>

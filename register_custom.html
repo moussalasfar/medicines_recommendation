@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="static/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <h1 id="id1">Sign Up</h1>
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h1 class="form-title" style="color: rgb(34, 33, 33);"><bold><i><span style="color: #3378c6;font-size:xx-large;">S</span>ymptomIA</i></bold>
+                            <svg fill="#6eb3dd" viewBox="0 0 24 24" id="medical-receipt-left-2" data-name="Line Color" xmlns="http://www.w3.org/2000/svg" class="icon line-color" stroke="#6eb3dd">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="2.256">
+                                    <path id="secondary" d="M14,8v4m2-2H12m-.73,6.73a2.52,2.52,0,0,1,0,3.54h0a2.52,2.52,0,0,1-3.54,0l-4-4a2.52,2.52,0,0,1,0-3.54h0a2.52,2.52,0,0,1,3.54,0ZM9.12,14.88,5.88,18.12" style="fill: none; stroke: #3378c6; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path>
+                                    <path id="primary" d="M7,8V4A1,1,0,0,1,8,3H20a1,1,0,0,1,1,1V20a1,1,0,0,1-1,1H16" style="fill: none; stroke: rgb(34, 33, 33); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path>
+                                </g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path id="secondary" d="M14,8v4m2-2H12m-.73,6.73a2.52,2.52,0,0,1,0,3.54h0a2.52,2.52,0,0,1-3.54,0l-4-4a2.52,2.52,0,0,1,0-3.54h0a2.52,2.52,0,0,1,3.54,0ZM9.12,14.88,5.88,18.12" style="fill: none; stroke: #3378c6; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path>
+                                    <path id="primary" d="M7,8V4A1,1,0,0,1,8,3H20a1,1,0,0,1,1,1V20a1,1,0,0,1-1,1H16" style="fill: none; stroke: rgb(34, 33, 33); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path>
+                                </g>
+                                </svg>
+                        </h1>
+                        <form method="POST" class="register-form" id="register-form">
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="name" id="name" placeholder="Your Name" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <input type="email" name="email" id="email" placeholder="Your Email" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="pass" id="pass" placeholder="Password" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="re_pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password" required/>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree to all statements in the <a href="#" class="term-service">Terms of service</a></label>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="static/images/signup.png" alt="sign up image"></figure>
+                        <a href="login_custom.html" class="signup-image-link">I am already a member</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
